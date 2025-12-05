@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinay Gogula | Video Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        .serif-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Hide scrollbar for video containers but allow scrolling */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-white selection:text-black">
+
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-40 mix-blend-difference px-6 py-6 flex justify-between items-center">
+        <a href="#" class="text-xl font-bold tracking-tighter uppercase">VG.</a>
+        <a href="#contact" class="text-sm font-light hover:underline underline-offset-4">Get in touch</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="relative z-10 pt-32 pb-20 px-6 max-w-7xl mx-auto">
+        
+        <!-- Intro Layout -->
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
+            
+            <!-- Left: Text Content -->
+            <div class="lg:w-1/2 space-y-8">
+                <h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9]">
+                    VINAY <br>
+                    <span class="serif-italic font-normal ml-2">Gogula</span>
+                </h1>
+                
+                <div class="h-px w-24 bg-white/30"></div>
+
+                <div class="space-y-6 text-lg md:text-xl font-light text-neutral-300 max-w-md">
+                    <p>
+                        18-year-old creative crafting edits that don't just exist—they perform. 
+                    </p>
+                    <p>
+                        Specializing in high-retention visual storytelling that cuts through the noise.
+                    </p>
+                </div>
+
+                <!-- Stats Box -->
+                <div class="inline-block border border-white p-6 mt-8 hover:bg-white hover:text-black transition-colors duration-300 cursor-default">
+                    <p class="text-xs uppercase tracking-widest mb-1 opacity-60">Total Reach</p>
+                    <p class="text-5xl md:text-6xl font-bold tracking-tighter">10M+</p>
+                    <p class="text-sm mt-2 font-medium">Organic Views Generated</p>
+                </div>
+            </div>
+
+            <!-- Right: Image/Visual -->
+            <div class="lg:w-1/2 relative group w-full">
+                <!-- Placeholder for Profile Image - using a stylistic grayscale placeholder -->
+                <div class="aspect-[3/4] w-full max-w-md ml-auto bg-neutral-900 border border-neutral-800 overflow-hidden relative">
+                    <!-- If you have a real image, replace src below. Using a generic stylish placeholder for now -->
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_4gLisWoxWsqWMGFr3dBH3vHXBdZnOuQgUSz1Y3U6Hol2WkFwp_qiqBggVeh6ojRQUUHSk7zuHX7Qf-lZx8dkvQOpEfqeUx6RCp0IwRLVrb1l2k7ev3_1U1JTKkBJLt19qO7P34cgGkDwkp_SvNcXubNIucik4eZGHxy8YDc2UR78jgM5xcBLq3cVPwA/s1024/retouch_2025102823041426%20-%20Edited.jpg" 
+                         alt="Vinay Gogula" 
+                         class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out grayscale">
+                    
+                    <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-md px-3 py-1 border border-white/20">
+                        <span class="text-xs uppercase tracking-widest text-white">Editor / Creator</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools Section -->
+        <section class="mt-32 border-t border-neutral-900 pt-16">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight mb-4 md:mb-0">Technique & Tools</h2>
+                <p class="text-neutral-500 text-sm max-w-xs">Software is just the medium. The vision is the craft.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="group border border-neutral-800 p-8 flex items-center justify-between hover:bg-neutral-900 transition-colors">
+                    <div class="flex items-center gap-4">
+                        <div class="p-3 bg-white/10 rounded-full">
+                            <i data-lucide="clapperboard" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xl font-medium">DaVinci Resolve</span>
+                    </div>
+                    <span class="opacity-0 group-hover:opacity-100 transition-opacity text-xs uppercase tracking-widest">Color & Edit</span>
+                </div>
+                
+                <div class="group border border-neutral-800 p-8 flex items-center justify-between hover:bg-neutral-900 transition-colors">
+                    <div class="flex items-center gap-4">
+                        <div class="p-3 bg-white/10 rounded-full">
+                            <i data-lucide="layers" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xl font-medium">Adobe After Effects</span>
+                    </div>
+                    <span class="opacity-0 group-hover:opacity-100 transition-opacity text-xs uppercase tracking-widest">VFX & Motion</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Works Section -->
+        <section class="mt-32">
+            <div class="mb-16">
+                <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter">Selected Works</h2>
+                <div class="w-full h-px bg-white mt-6"></div>
+            </div>
+
+            <!-- Grid Layout: Adjusted Vimeo to match standard vertical shorts for clean mobile/desktop UX -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Vimeo Highlight -->
+                <div class="group relative aspect-[9/16] w-full bg-neutral-900 border border-neutral-800 overflow-hidden">
+                    <div class="absolute top-4 left-4 z-10 px-2 py-1 bg-black text-white text-xs font-bold uppercase tracking-widest border border-white/20">
+                        Vimeo
+                    </div>
+                    <!-- Vimeo background=1 for cleaner loop/autoplay effect if supported, otherwise standard embed -->
+                    <iframe src="https://player.vimeo.com/video/1142527302?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                            frameborder="0" 
+                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                            class="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500 object-cover" 
+                            title="Highlight Reel"></iframe>
+                </div>
+
+                <!-- YouTube Short 1 -->
+                <div class="group relative aspect-[9/16] w-full bg-neutral-900 border border-neutral-800 overflow-hidden">
+                    <div class="absolute top-4 left-4 z-10 px-2 py-1 bg-white text-black text-xs font-bold uppercase tracking-widest mix-blend-screen">
+                        Short
+                    </div>
+                    <iframe class="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500" 
+                            src="https://www.youtube.com/embed/U7Sx2fiv_Ik" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen></iframe>
+                </div>
+
+                <!-- YouTube Short 2 -->
+                <div class="group relative aspect-[9/16] w-full bg-neutral-900 border border-neutral-800 overflow-hidden">
+                     <div class="absolute top-4 left-4 z-10 px-2 py-1 bg-white text-black text-xs font-bold uppercase tracking-widest mix-blend-screen">
+                        Short
+                    </div>
+                    <iframe class="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500" 
+                            src="https://www.youtube.com/embed/JokAARp7vcA" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen></iframe>
+                </div>
+
+                <!-- YouTube Short 3 -->
+                <div class="group relative aspect-[9/16] w-full bg-neutral-900 border border-neutral-800 overflow-hidden">
+                     <div class="absolute top-4 left-4 z-10 px-2 py-1 bg-white text-black text-xs font-bold uppercase tracking-widest mix-blend-screen">
+                        Short
+                    </div>
+                    <iframe class="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500" 
+                            src="https://www.youtube.com/embed/-7dYxKmp6gQ" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen></iframe>
+                </div>
+
+                <!-- YouTube Short 4 -->
+                <div class="group relative aspect-[9/16] w-full bg-neutral-900 border border-neutral-800 overflow-hidden">
+                     <div class="absolute top-4 left-4 z-10 px-2 py-1 bg-white text-black text-xs font-bold uppercase tracking-widest mix-blend-screen">
+                        Short
+                    </div>
+                    <iframe class="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500" 
+                            src="https://www.youtube.com/embed/ntH3HE9qxmI" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen></iframe>
+                </div>
+
+                <!-- YouTube Short 5 -->
+                <div class="group relative aspect-[9/16] w-full bg-neutral-900 border border-neutral-800 overflow-hidden">
+                     <div class="absolute top-4 left-4 z-10 px-2 py-1 bg-white text-black text-xs font-bold uppercase tracking-widest mix-blend-screen">
+                        Short
+                    </div>
+                    <iframe class="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500" 
+                            src="https://www.youtube.com/embed/OTVPkHclw0Y" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact" class="mt-32 border-t border-neutral-900 pt-16">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                <div class="md:w-1/3">
+                    <h2 class="text-3xl font-bold tracking-tight mb-4">Let's Create</h2>
+                    <p class="text-neutral-500 text-sm">Ready to elevate your content? Drop a message below and let's discuss your vision.</p>
+                </div>
+                
+                <div class="w-full md:w-1/2">
+                    <form id="contact-form" action="https://formspree.io/f/mjkqnvja" method="POST" class="space-y-4">
+                        <div>
+                            <label for="email" class="block text-xs uppercase tracking-widest mb-2 text-neutral-400">Your Email</label>
+                            <input type="email" name="email" id="email" required 
+                                class="w-full bg-neutral-900 border border-neutral-800 p-4 text-white focus:outline-none focus:border-white transition-colors placeholder-neutral-700"
+                                placeholder="email@example.com">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-xs uppercase tracking-widest mb-2 text-neutral-400">Message</label>
+                            <textarea name="message" id="message" rows="4" required
+                                class="w-full bg-neutral-900 border border-neutral-800 p-4 text-white focus:outline-none focus:border-white transition-colors placeholder-neutral-700"
+                                placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" id="submit-btn" class="w-full bg-white text-black py-4 font-bold uppercase tracking-widest hover:bg-neutral-200 transition-colors">
+                            Send Message
+                        </button>
+                        
+                        <p id="form-status" class="text-sm text-center hidden"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-20 py-12 border-t border-neutral-900 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <p class="text-2xl font-bold tracking-tighter">VINAY GOGULA</p>
+                <p class="text-neutral-500 text-sm mt-1">© 2024 All Rights Reserved.</p>
+            </div>
+            
+            <div class="flex gap-6 items-center">
+                <!-- Social Links -->
+                <a href="https://instagram.com/Thevinaygogula" target="_blank" class="text-neutral-400 hover:text-white transition-colors uppercase text-xs tracking-widest">
+                    @Thevinaygogula
+                </a>
+                <span class="text-neutral-700 hidden md:inline">|</span>
+                <a href="mailto:gogulavinay80@gmail.com" class="text-neutral-400 hover:text-white transition-colors uppercase text-xs tracking-widest">
+                    gogulavinay80@gmail.com
+                </a>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // AJAX Form Submission for Formspree
+        const form = document.getElementById("contact-form");
+        
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const status = document.getElementById("form-status");
+            const btn = document.getElementById("submit-btn");
+            const data = new FormData(event.target);
+            
+            btn.disabled = true;
+            btn.innerHTML = "Sending...";
+
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    status.innerHTML = "Thanks! Your message has been sent.";
+                    status.classList.remove('hidden');
+                    status.classList.add('text-green-500');
+                    form.reset();
+                    btn.innerHTML = "Message Sent";
+                    setTimeout(() => {
+                        btn.disabled = false;
+                        btn.innerHTML = "SEND MESSAGE";
+                        status.classList.add('hidden');
+                    }, 3000);
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                        } else {
+                            status.innerHTML = "Oops! There was a problem submitting your form";
+                        }
+                        status.classList.remove('hidden');
+                        status.classList.add('text-red-500');
+                        btn.disabled = false;
+                        btn.innerHTML = "TRY AGAIN";
+                    })
+                }
+            }).catch(error => {
+                status.innerHTML = "Oops! There was a problem submitting your form";
+                status.classList.remove('hidden');
+                status.classList.add('text-red-500');
+                btn.disabled = false;
+                btn.innerHTML = "TRY AGAIN";
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
+    </script>
+</body>
+</html>
