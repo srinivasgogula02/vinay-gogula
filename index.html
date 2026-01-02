@@ -62,19 +62,15 @@
 
     <div class="grain-overlay"></div>
 
-    <!-- Navigation -->
     <nav class="fixed top-0 left-0 w-full z-40 mix-blend-difference px-6 py-6 flex justify-between items-center">
         <a href="#" class="text-xl font-bold tracking-tighter uppercase">VG.</a>
         <a href="#contact" class="text-sm font-light hover:underline underline-offset-4">Get in touch</a>
     </nav>
 
-    <!-- Hero Section -->
     <main class="relative z-10 pt-32 pb-20 px-6 max-w-7xl mx-auto">
         
-        <!-- Intro Layout -->
         <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
             
-            <!-- Left: Text Content -->
             <div class="lg:w-1/2 space-y-8">
                 <h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9]">
                     VINAY <br>
@@ -92,7 +88,6 @@
                     </p>
                 </div>
 
-                <!-- Stats Box -->
                 <div class="inline-block border border-white p-6 mt-8 hover:bg-white hover:text-black transition-colors duration-300 cursor-default">
                     <p class="text-xs uppercase tracking-widest mb-1 opacity-60">Total Reach</p>
                     <p class="text-5xl md:text-6xl font-bold tracking-tighter">10M+</p>
@@ -100,11 +95,8 @@
                 </div>
             </div>
 
-            <!-- Right: Image/Visual -->
             <div class="lg:w-1/2 relative group w-full">
-                <!-- Placeholder for Profile Image - using a stylistic grayscale placeholder -->
                 <div class="aspect-[3/4] w-full max-w-md ml-auto bg-neutral-900 border border-neutral-800 overflow-hidden relative">
-                    <!-- If you have a real image, replace src below. Using a generic stylish placeholder for now -->
                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_4gLisWoxWsqWMGFr3dBH3vHXBdZnOuQgUSz1Y3U6Hol2WkFwp_qiqBggVeh6ojRQUUHSk7zuHX7Qf-lZx8dkvQOpEfqeUx6RCp0IwRLVrb1l2k7ev3_1U1JTKkBJLt19qO7P34cgGkDwkp_SvNcXubNIucik4eZGHxy8YDc2UR78jgM5xcBLq3cVPwA/s1024/retouch_2025102823041426%20-%20Edited.jpg" 
                          alt="Vinay Gogula" 
                          class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out grayscale">
@@ -116,52 +108,65 @@
             </div>
         </div>
 
-        <!-- Tools Section -->
         <section class="mt-32 border-t border-neutral-900 pt-16">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
                 <h2 class="text-3xl font-bold tracking-tight mb-4 md:mb-0">Technique & Tools</h2>
                 <p class="text-neutral-500 text-sm max-w-xs">Software is just the medium. The vision is the craft.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                
                 <div class="group border border-neutral-800 p-8 flex items-center justify-between hover:bg-neutral-900 transition-colors">
                     <div class="flex items-center gap-4">
-                        <div class="p-3 bg-white/10 rounded-full">
-                            <i data-lucide="clapperboard" class="w-6 h-6"></i>
+                        <div class="p-3 bg-white/10 rounded-full flex items-center justify-center">
+                           <svg viewBox="0 0 100 100" class="w-6 h-6 fill-white">
+                                <rect x="5" y="5" width="90" height="90" rx="20" ry="20" fill="none" stroke="white" stroke-width="8"/>
+                                <text x="50" y="65" font-family="Arial, sans-serif" font-weight="900" font-size="50" text-anchor="middle" fill="white">Pr</text>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-medium">Premiere Pro</span>
+                    </div>
+                    <span class="opacity-0 group-hover:opacity-100 transition-opacity text-xs uppercase tracking-widest">Assembly</span>
+                </div>
+
+                <div class="group border border-neutral-800 p-8 flex items-center justify-between hover:bg-neutral-900 transition-colors">
+                    <div class="flex items-center gap-4">
+                        <div class="p-3 bg-white/10 rounded-full flex items-center justify-center">
+                            <svg viewBox="0 0 100 100" class="w-6 h-6 fill-white">
+                                <rect x="5" y="5" width="90" height="90" rx="20" ry="20" fill="none" stroke="white" stroke-width="8"/>
+                                <text x="50" y="65" font-family="Arial, sans-serif" font-weight="900" font-size="50" text-anchor="middle" fill="white">Ae</text>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-medium">After Effects</span>
+                    </div>
+                    <span class="opacity-0 group-hover:opacity-100 transition-opacity text-xs uppercase tracking-widest">VFX & Motion</span>
+                </div>
+                
+                <div class="group border border-neutral-800 p-8 flex items-center justify-between hover:bg-neutral-900 transition-colors">
+                    <div class="flex items-center gap-4">
+                        <div class="p-3 bg-white/10 rounded-full flex items-center justify-center">
+                            <i data-lucide="aperture" class="w-6 h-6"></i>
                         </div>
                         <span class="text-xl font-medium">DaVinci Resolve</span>
                     </div>
                     <span class="opacity-0 group-hover:opacity-100 transition-opacity text-xs uppercase tracking-widest">Color & Edit</span>
                 </div>
                 
-                <div class="group border border-neutral-800 p-8 flex items-center justify-between hover:bg-neutral-900 transition-colors">
-                    <div class="flex items-center gap-4">
-                        <div class="p-3 bg-white/10 rounded-full">
-                            <i data-lucide="layers" class="w-6 h-6"></i>
-                        </div>
-                        <span class="text-xl font-medium">Adobe After Effects</span>
-                    </div>
-                    <span class="opacity-0 group-hover:opacity-100 transition-opacity text-xs uppercase tracking-widest">VFX & Motion</span>
-                </div>
             </div>
         </section>
 
-        <!-- Selected Works Section -->
         <section class="mt-32">
             <div class="mb-16">
                 <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter">Selected Works</h2>
                 <div class="w-full h-px bg-white mt-6"></div>
             </div>
 
-            <!-- Grid Layout: Adjusted Vimeo to match standard vertical shorts for clean mobile/desktop UX -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Vimeo Highlight -->
                 <div class="group relative aspect-[9/16] w-full bg-neutral-900 border border-neutral-800 overflow-hidden">
                     <div class="absolute top-4 left-4 z-10 px-2 py-1 bg-black text-white text-xs font-bold uppercase tracking-widest border border-white/20">
                         Vimeo
                     </div>
-                    <!-- Vimeo background=1 for cleaner loop/autoplay effect if supported, otherwise standard embed -->
                     <iframe src="https://player.vimeo.com/video/1142527302?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
                             frameborder="0" 
                             allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
@@ -169,19 +174,17 @@
                             title="Highlight Reel"></iframe>
                 </div>
 
-                <!-- YouTube Short 1 -->
                 <div class="group relative aspect-[9/16] w-full bg-neutral-900 border border-neutral-800 overflow-hidden">
                     <div class="absolute top-4 left-4 z-10 px-2 py-1 bg-white text-black text-xs font-bold uppercase tracking-widest mix-blend-screen">
                         Short
                     </div>
                     <iframe class="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500" 
-                            src="https://www.youtube.com/embed/U7Sx2fiv_Ik" 
+                            src="https://www.youtube.com/embed/smSshOabwLQ" 
                             title="YouTube video player" frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             allowfullscreen></iframe>
                 </div>
 
-                <!-- YouTube Short 2 -->
                 <div class="group relative aspect-[9/16] w-full bg-neutral-900 border border-neutral-800 overflow-hidden">
                      <div class="absolute top-4 left-4 z-10 px-2 py-1 bg-white text-black text-xs font-bold uppercase tracking-widest mix-blend-screen">
                         Short
@@ -193,19 +196,17 @@
                             allowfullscreen></iframe>
                 </div>
 
-                <!-- YouTube Short 3 -->
                 <div class="group relative aspect-[9/16] w-full bg-neutral-900 border border-neutral-800 overflow-hidden">
                      <div class="absolute top-4 left-4 z-10 px-2 py-1 bg-white text-black text-xs font-bold uppercase tracking-widest mix-blend-screen">
                         Short
                     </div>
                     <iframe class="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500" 
-                            src="https://www.youtube.com/embed/-7dYxKmp6gQ" 
+                            src="https://www.youtube.com/embed/U7Sx2fiv_Ik" 
                             title="YouTube video player" frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             allowfullscreen></iframe>
                 </div>
 
-                <!-- YouTube Short 4 -->
                 <div class="group relative aspect-[9/16] w-full bg-neutral-900 border border-neutral-800 overflow-hidden">
                      <div class="absolute top-4 left-4 z-10 px-2 py-1 bg-white text-black text-xs font-bold uppercase tracking-widest mix-blend-screen">
                         Short
@@ -217,7 +218,6 @@
                             allowfullscreen></iframe>
                 </div>
 
-                <!-- YouTube Short 5 -->
                 <div class="group relative aspect-[9/16] w-full bg-neutral-900 border border-neutral-800 overflow-hidden">
                      <div class="absolute top-4 left-4 z-10 px-2 py-1 bg-white text-black text-xs font-bold uppercase tracking-widest mix-blend-screen">
                         Short
@@ -229,10 +229,20 @@
                             allowfullscreen></iframe>
                 </div>
 
+                <div class="group relative aspect-[9/16] w-full bg-neutral-900 border border-neutral-800 overflow-hidden">
+                     <div class="absolute top-4 left-4 z-10 px-2 py-1 bg-white text-black text-xs font-bold uppercase tracking-widest mix-blend-screen">
+                        Short
+                    </div>
+                    <iframe class="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500" 
+                            src="https://www.youtube.com/embed/smSshOabwLQ" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen></iframe>
+                </div>
+
             </div>
         </section>
 
-        <!-- Contact Form Section -->
         <section id="contact" class="mt-32 border-t border-neutral-900 pt-16">
             <div class="flex flex-col md:flex-row justify-between items-start gap-12">
                 <div class="md:w-1/3">
@@ -265,7 +275,6 @@
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="mt-20 py-12 border-t border-neutral-900 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
                 <p class="text-2xl font-bold tracking-tighter">VINAY GOGULA</p>
@@ -273,7 +282,6 @@
             </div>
             
             <div class="flex gap-6 items-center">
-                <!-- Social Links -->
                 <a href="https://instagram.com/Thevinaygogula" target="_blank" class="text-neutral-400 hover:text-white transition-colors uppercase text-xs tracking-widest">
                     @Thevinaygogula
                 </a>
